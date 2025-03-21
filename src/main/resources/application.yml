@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB    # 单个文件大小限制
+      max-request-size: 20MB # 总请求大小限制
+  datasource:
+    url: jdbc:mysql://localhost:3306/35hm?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/**/*.xml
+#  type-aliases-package: com.cuctut.hl.model
+#  global-config:
+#    db-config:
+#      id-type: auto # 主键策略
